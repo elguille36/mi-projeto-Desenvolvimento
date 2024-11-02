@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamiento de Citas</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" type="image/jpg" href=".//img/jesucristo.jpg"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="bi bi-card-text" id="Icon"></i> Agendamento Ala Itupeva</h1>
+        
+        <div class="form-container">
+            <input type="text" id="title" placeholder="Tipo De Agendamento" required>
+            <input type="text" id="name" placeholder="Nome e SobreNome" required>
+            <input type="date" id="date" required>
+            <input type="time" id="time" required>
+            <button onclick="addAppointment()">Fazer Agendamento</button>
+        </div>
+
+        <h2>Agendamentos</h2>
+        <p>Obs: Lembrando que os horarios disponiveis 
+            são a partir das 19:00hs,Dia Terça e Quinta! <strong>Obrigado Bispado da Ala Itupeva</strong>
+        </p>
+        <div id="appointments-list"></div>
+    </div>
+
+    <script src="./JavaScript/app.js"></script>
+</body>
+</html>
