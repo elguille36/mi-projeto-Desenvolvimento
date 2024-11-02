@@ -24,7 +24,7 @@ body {
     padding: 20px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4); /*actualize o color e tamanho da sombra*/
     border-radius: 8px;
-    background: transparent;/*actualize tirei o fondo*/
+    /*background: transparent;/*actualize tirei o fondo*/
     border: solid #fff; /*actualize os borde*/
     /*margin-top: 15rem;*/
 }
