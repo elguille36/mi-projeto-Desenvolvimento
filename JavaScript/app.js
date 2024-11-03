@@ -42,8 +42,9 @@ function loadAppointments() {
 
         appointmentDiv.innerHTML = `
             <h3>${appointment.title}</h3>
-            <p>Fecha: ${appointment.date}</p>
-            <p>Hora: ${appointment.time}</p>
+            <h3>${appointment.name}</h3>
+            <p>Data: ${appointment.date}</p>
+            <p>Horario: ${appointment.time}Hs</p>
             <button onclick="deleteAppointment(${index})">Eliminar</button>
         `;
 
@@ -58,3 +59,14 @@ function deleteAppointment(index) {
 
     loadAppointments();
 }
+
+ /*Funcion hecha para probar al clik boton criar un alert de aviso envio formulario*/
+
+function CadastroRealizado(){
+
+document.getElementById('appointments-list');
+alert("Agendamento Cadastrado");
+return;
+
+}
+

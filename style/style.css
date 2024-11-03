@@ -13,8 +13,8 @@ body {
     align-items: center;
     min-height: 100vh;
     background-image: url(..//img/jesucristo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat;/*imagen no repita*/
+    background-size: cover;/*ampliar imagen na tela completa*/
 }
 
 .container {
@@ -24,15 +24,42 @@ body {
     padding: 20px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4); /*actualize o color e tamanho da sombra*/
     border-radius: 8px;
-    /*background: transparent;/*actualize tirei o fondo*/
+    background: transparent;/*actualize tirei o fondo*/
     border: solid #fff; /*actualize os borde*/
     /*margin-top: 15rem;*/
 }
 
+/* icono*/
 #Icon {
 
     color: #5A67D8;
+
 }
+
+/*navegador*/
+
+.nav{
+
+    position: fixed;
+    top: 10%;
+    right: 9%;
+}
+
+.enlace{
+
+    color:#fff;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #5A67D8;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.enlace:hover{
+
+    background-color: #4C51BF;
+}
+
 
  h2 {
     color: #333;
@@ -45,6 +72,7 @@ h1{
     color : #fff;
     margin-bottom: 15px;
 }
+
 
 .form-container {
     display: flex;
