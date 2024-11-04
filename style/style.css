@@ -36,6 +36,19 @@ body {
 
 }
 
+@media (max-width:600px){
+
+    #Icon{
+
+        display: none;
+    }
+
+    footer{
+
+        font-size: 15px;
+    }
+}
+
 /*navegador*/
 
 .nav{
@@ -45,12 +58,22 @@ body {
     right: 9%;
 }
 
+footer{
+
+    position: fixed;
+    text-align: center;
+    color: #4C51BF;
+    top: 91%;
+    font-size: 20px;
+
+}
+
 .enlace{
 
     color:#fff;
     text-decoration: none;
     font-size: 20px;
-    background-color: #5A67D8;
+    background-color: #1f2b97;
     padding: 10px;
     border-radius: 20px;
 }
