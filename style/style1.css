@@ -38,12 +38,23 @@ body {
 
 h3{
 
-    color:#181616;
+    color:#fff;
 }
 
 .deleteAppointment{
 
     color: #3c49b8;
+}
+
+h1{
+
+    text-align: center;
+    color:#fff;
+}
+
+p{
+
+    color:#070404;
 }
 
 

@@ -47,7 +47,20 @@ body {
 
         font-size: 15px;
     }
+
+    .container{
+
+        width: 94%;
+        max-width: 500px;
+    }
+
+    footer{
+
+        font-size: 14px;
+    }
 }
+
+
 
 /*navegador*/
 
@@ -73,7 +86,7 @@ footer{
     color:#fff;
     text-decoration: none;
     font-size: 20px;
-    background-color: #1f2b97;
+    background-color: #5A67D8;
     padding: 10px;
     border-radius: 20px;
 }
@@ -81,6 +94,7 @@ footer{
 .enlace:hover{
 
     background-color: #4C51BF;
+    box-shadow: 0 0 6px #f4f4f9;
 }
 
 
