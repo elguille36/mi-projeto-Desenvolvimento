@@ -60,13 +60,32 @@ function deleteAppointment(index) {
     loadAppointments();
 }
 
- /*Funcion hecha para probar al clik boton criar un alert de aviso envio formulario*/
 
-function CadastroRealizado(){
+//funcion para el acordeon
 
-document.getElementById('appointments-list');
-alert("Agendamento Cadastrado");
-return;
+function toggleDropdown() {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+}
 
+
+function updateSelectedOptions() {
+    const checkboxes = document.querySelectorAll('.dropdown-content input[type="checkbox"]');
+    const selected = Array.from(checkboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+    
+    document.getElementById('title').value = selected.join(', ');
+}
+
+// Cierra el menú desplegable si se hace clic fuera de él
+
+window.onclick = function(event) {
+    if (!event.target.matches('#title')) {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        if (dropdownContent.style.display === 'block') {
+            dropdownContent.style.display = 'none';
+        }
+    }
 }
 
