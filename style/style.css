@@ -205,7 +205,7 @@ button:hover {
 /*Estilo para el Acordeon del imput title*/
 .dropdown {
     position: relative;
-    width: 200px;
+    width: 100%;
 }
 
 #title {
