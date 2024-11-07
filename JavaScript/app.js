@@ -18,6 +18,7 @@ function addAppointment() {
         time
     };
 
+ 
     let appointments = JSON.parse(localStorage.getItem('appointments')) || [];
     appointments.push(appointment);
     localStorage.setItem('appointments', JSON.stringify(appointments));
@@ -86,6 +87,26 @@ window.onclick = function(event) {
         if (dropdownContent.style.display === 'block') {
             dropdownContent.style.display = 'none';
         }
+    }
+}
+
+// Seguridad para Abrir el enlace
+function abrirEnlaceConPassword(event, url) {
+    // Evita la redirección automática
+    event.preventDefault();
+
+    // Define la contraseña
+    const passwordCorrecta = "h";
+
+    // Solicita la contraseña al usuario
+    const passwordIngresada = prompt("Digite a Senha:");
+
+    // Verifica si la contraseña es correcta
+    if (passwordIngresada === passwordCorrecta) {
+        // Redirige al enlace si la contraseña es correcta
+        window.location.href = url;
+    } else {
+        alert("Senha Inválida. Não Tem Acesso.");
     }
 }
 

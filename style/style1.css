@@ -26,13 +26,8 @@ body {
     background-color: #3c49b8;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 10px 10px #f4f4f9;
+    box-shadow: 0 8px 10px #f4f4f9;
 
-}
-
-#appointments-list{
-
-    color:#fff;
 }
 
 
@@ -56,7 +51,9 @@ h1{
 
 p{
 
-    color:#070404;
+    color:#050505;
+    margin-top: 3px;
+    margin-bottom: 1px;
 }
 
 @media(max-width:600px){
@@ -67,6 +64,26 @@ p{
         font-size: 16px;
         margin-bottom: 15px;
     }
+}
+
+.nav-index1{
+
+    position: absolute;
+}
+
+.nav-index1:hover{
+
+    font-size: 25px;
+}
+
+a{
+position: fixed;
+top:14%;
+left: 10%;
+color:#fff;
+text-decoration: none;
+font-size: 20px;
+
 }
 
 
