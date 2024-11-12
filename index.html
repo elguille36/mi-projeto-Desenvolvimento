@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,37 +9,48 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-
-     <nav class="nav">
-
-        <a class="enlace" href="#" onclick="abrirEnlaceConPassword(event, './index1.html',)" target="_blank">Lista de Agendamentos</a>
-
+<header>
+    <h1 class="titulo">Bem-vindo ao App de Agendamentos Ala Itupeva</h1>
+</header>
+    <div class="menu-icon" onclick="toggleNav()">
+        ☰
+    </div>
+    <nav id="nav" class="nav-closed">
+    <ul class="list">
+        <li><a class="enlace" href="#" onclick="abrirEnlaceConPassword(event, './index1.html',)" target="_blank">Lista de Agendamentos</a></li>
+    </ul>
     </nav>
+    <main>
+        <section>
     <div class="container">
-        <h1><i class="bi bi-card-text" id="Icon"></i> Agendamentos Ala Itupeva</h1>
+        <h2 class="Sub-titulo"><i class="bi bi-card-text" id="Icon"></i>  Agendamentos </h2>
         
         <div class="form-container">
             <div class="dropdown">
-            <input type="text" id="title" readonly onclick="toggleDropdown()"placeholder="Tipo de Agendamento:" required>
+            <input type="text" id="title" readonly onclick="toggleDropdown()"placeholder="Tipo de Entrevista:" required>
             <div class="dropdown-content">
-            <label><input type="checkbox" value="Entrevista Recomendação Bispo " onclick="updateSelectedOptions()">Entrevista Recomendação (Bispo Patelli) </label>
-            <label><input type="checkbox" value="Entrevista Normal Conselheiros" onclick="updateSelectedOptions()">Entrevista Normal Conselheiros</label>
-            <label><input type="checkbox" value="Carona ao Templo" onclick="updateSelectedOptions()"> Carona ao Templo</label>
+            <label><input type="checkbox" value="Ent.Bispo (Renovação,Acerto Anual,Benção Patriarcal)" onclick="updateSelectedOptions()">Ent.Bispo (Renovação,Acerto Anual,Benção Patriarcal) </label>
+            <label><input type="checkbox" value="Ent.1ro.Conselheiros (Asuntos Financeiros)" onclick="updateSelectedOptions()">Ent.1ro.Conselheiros (Asuntos Financeiros)</label>
+            <label><input type="checkbox" value="Ent.2do.Conselheiros(Assuntos Familiares)" onclick="updateSelectedOptions()">Ent.2do.Conselheiros(Assuntos Familiares)</label>
+            <label><input type="checkbox" value="Entrevista Pres.Quorum" onclick="updateSelectedOptions()">Ent.Pres.Quorum</label>
+            <label><input type="checkbox" value="Entrevista Soc.soc" onclick="updateSelectedOptions()">Ent.Soc.Soc</label>
             </div>
             </div>
-            <input type="text" id="name" placeholder="Nome e SobreNome" required>
+            <input type="text" id="name" placeholder="Digite Nome e SobreNome" required>
             <input type="date" id="date" required>
             <input type="time" id="time" required>
             <button onclick="addAppointment()">Fazer Agendamento</button>
         </div>
 
         <h2>Agendamentos</h2>
-        <p>Obs: Lembrando que os horarios disponiveis 
-            são a partir das 19:00hs,Dia Terça e Quinta! <strong>Obrigado Bispado da Ala Itupeva</strong>
+        <p class="paragrafo-Observacao">Obs: Lembrando que os horarios disponiveis são:
+            Terça (19:00hs até 20:30,Bispo e Pres.Quorum), Quarta-feira (1ro Conselheiros),Quinta-Feira (2do Conselheiros e Pres.Soc.soc),Os Domingos das 17:00 até 18:30 en
+            Geral. <strong>Obrigado Bispado da Ala Itupeva</strong>
         </p>
         <!--<div id="appointments-list"></div>-->
     </div>
-
+    </section>
+    </main>
     <footer>
 
         <h4><i class="bi bi-c-circle-fill"></i>  Projeto-Desenvolvimento/2024</h4>

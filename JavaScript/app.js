@@ -31,6 +31,7 @@ function addAppointment() {
     loadAppointments();
 }
 
+
 function loadAppointments() {
     const appointmentsList = document.getElementById('appointments-list');
     appointmentsList.innerHTML = '';
@@ -51,7 +52,10 @@ function loadAppointments() {
 
         appointmentsList.appendChild(appointmentDiv);
     });
+
 }
+
+
 
 function deleteAppointment(index) {
     let appointments = JSON.parse(localStorage.getItem('appointments')) || [];
@@ -61,6 +65,19 @@ function deleteAppointment(index) {
     loadAppointments();
 }
 
+//Função para Restrição de Data não Disponivel
+
+const diasDisponivel = [0, 2, 3, 4,]; // Dias disponivel Domingo , Terça , ....5 Quinta
+
+        document.getElementById("date").addEventListener("input", function() {
+            const dataSelecione = new Date(this.value);
+            const diaDaSemana = dataSelecione.getUTCDay();
+
+            if (!diasDisponivel.includes(diaDaSemana)) {
+                alert("Data não disponivel. Por gentileza, seleciona outro dia. ( Domingo, Terça , Quarta e Quinta");
+                this.value = ""; // Limpiar o imput sim não é data selecionada 
+            }
+        });
 
 //funcion para el acordeon
 
@@ -108,5 +125,12 @@ function abrirEnlaceConPassword(event, url) {
     } else {
         alert("Senha Inválida. Não Tem Acesso.");
     }
+}
+
+//função para activacion menu responsive
+function toggleNav() {
+    const navMenu = document.getElementById('nav');
+    navMenu.classList.toggle('nav-open');
+    navMenu.classList.toggle('nav-closed');
 }
 
