@@ -8,10 +8,10 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*min-height: 100vh;*/
     background-image: url(..//img/jesucristo.jpg);
     background-repeat: no-repeat;/*imagen no repita*/
     background-size: cover;/*ampliar imagen na tela completa*/
@@ -29,6 +29,30 @@ body {
     /*margin-top: 15rem;*/
 }
 
+/*Se coloco emcabezado do site*/
+header{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+/*Corpo Principal*/
+main{
+
+    width: 100%;
+}
+
+/*Seccion de Conteudos*/
+section{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 /* icono*/
 #Icon {
 
@@ -36,96 +60,80 @@ body {
 
 }
 
-@media(min-width:600px) and (max-width:1200px){
+.titulo{
 
-    .nav{
+    text-align: center;
+    color: #fff;
+    animation: fadeSlide 5s infinite alternate;
+}
 
-        top:9%;
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
     }
-
-    #Icon{
-
-        display: none;
+    50% {
+        opacity: 1;
+        transform: translateY(0);
     }
-
-    footer{
-
-        font-size: 20px;
-    }
-
-    .container{
-
-        width: 94%;
-        max-width: 500px;
-    }
-
-    h1{
-
-        text-align: center;
-    }
-
-    .enlace{
-
-        font-size: 10px;
+    100% {
+        opacity: 0;
+        transform: translateY(40px);
     }
 
 }
 
-
-@media(max-width:599px){
-
-    .nav{
-
-        top:5%;
-    }
-
-.container{
-
-    width: 80%;
-    max-width: 400px;
-}
-
-#Icon{
+.btn-menu{
 
     display: none;
 }
 
-h2,h1{
+.btn-menu{
 
     font-size: 20px;
-    text-align: center;
+    cursor: pointer;
+    color:#fff;
+    float: right;
+    margin-right: 10%;
 }
 
-p{
+.paragrafo-Observacao{
 
-    font-size: 14px;
+    background-color: #4452d1;
+    color:#fff;
+    padding: 4px;
+    border-radius: 5px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px #333;
+
+
 }
 
-footer{
+/*navegador se actualizo*/
 
-    font-size: 15px;
-}
-
-}
-
-
-
-/*navegador*/
-
-.nav{
-
-    position: fixed;
+#nav{
+    float: right;
+    margin-right: 6%;
+    margin-bottom: 5%;
+    /*position: fixed;
     right: 9%;
-    top:10%;
+    top:6%;*/
+}
+
+.list{
+
+    list-style: none;
 }
 
 footer{
 
-    position: fixed;
+   /* position: fixed;*/
     text-align: center;
-    color: #4C51BF;
-    top: 91%;
+    color: #4308a3;
+    /*top: 91%;*/
     font-size: 20px;
+    margin-top: 3%;
 
 }
 
@@ -133,7 +141,6 @@ footer{
 
     color:#fff;
     text-decoration: none;
-    font-size: 20px;
     background-color: #5A67D8;
     padding: 10px;
     border-radius: 20px;
@@ -152,10 +159,11 @@ footer{
     text-align: center;
 }
 
-h1{
+.Sub-titulo{
 
     color : #fff;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 
@@ -237,4 +245,105 @@ button:hover {
 
 .dropdown-content label:hover {
     background-color: #f1f1f1;
+}
+
+
+@media(min-width:600px) and (max-width:1200px){
+
+
+    #Icon{
+
+        display: none;
+    }
+
+    footer{
+
+        font-size: 20px;
+    }
+
+    .container{
+
+        width: 94%;
+        max-width: 500px;
+    }
+
+    .enlace{
+
+        font-size: 10px;
+    }
+
+}
+
+
+@media(max-width:750px){
+
+    header{
+
+        height: 8vh;
+    }
+
+    .menu-icon {
+        font-size: 2.5rem;
+        cursor: pointer;
+        float: right;
+        margin-right: 5%;
+        margin-bottom: 2%;
+        color: #fff;
+    }
+    
+    .nav {
+        margin-left: auto;
+    }
+    
+    nav.nav-closed {
+        display: none;
+    }
+    
+    nav.nav-open {
+        display: block;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+
+    }
+
+    .titulo{
+   font-size: 15px;
+
+    }
+
+
+.container{
+
+    width: 80%;
+    max-width: 400px;
+}
+
+#Icon{
+
+    display: none;
+}
+
+
+.paragrafo-Observacao{
+
+    font-size: 14px;
+}
+
+footer{
+
+    font-size: 15px;
+}
+
 }
