@@ -113,7 +113,7 @@ function abrirEnlaceConPassword(event, url) {
     event.preventDefault();
 
     // Define la contraseña
-    const passwordCorrecta = "h";
+    const passwordCorrecta = "bispado-lider";
 
     // Solicita la contraseña al usuario
     const passwordIngresada = prompt("Digite a Senha:");
