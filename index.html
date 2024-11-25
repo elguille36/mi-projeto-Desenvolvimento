@@ -27,23 +27,28 @@
         
         <div class="form-container">
             <div class="dropdown">
-            <input type="text" id="title" readonly onclick="toggleDropdown()"placeholder="Tipo de Entrevista:" required>
+            <input type="text" id="title" readonly onclick="toggleDropdown()" placeholder="Tipos de Entrevista:" required>
             <div class="dropdown-content">
-            <label><input type="checkbox" value="Ent.Bispo (Renovação,Acerto Anual,Benção Patriarcal)" onclick="updateSelectedOptions()">Ent.Bispo (Renovação,Acerto Anual,Benção Patriarcal) </label>
-            <label><input type="checkbox" value="Ent.1ro.Conselheiros (Asuntos Financeiros)" onclick="updateSelectedOptions()">Ent.1ro.Conselheiros (Asuntos Financeiros)</label>
-            <label><input type="checkbox" value="Ent.2do.Conselheiros(Assuntos Familiares)" onclick="updateSelectedOptions()">Ent.2do.Conselheiros(Assuntos Familiares)</label>
-            <label><input type="checkbox" value="Entrevista Pres.Quorum" onclick="updateSelectedOptions()">Ent.Pres.Quorum</label>
-            <label><input type="checkbox" value="Entrevista Soc.soc" onclick="updateSelectedOptions()">Ent.Soc.Soc</label>
+            <label><input type="checkbox" value="Entrevista Bispo Patelli(1ra Recomendação)" onclick="updateSelectedOptions()"> 1ra Recomendação </label>
+            <label><input type="checkbox" value="Entrevista Bispo Patelli( Acerto Anual Dizimo)" onclick="updateSelectedOptions()"> Acerto Anual Dizimo</label>
+            <label><input type="checkbox" value="Entrevista Bispo Patelli( Benção Patriarcal)" onclick="updateSelectedOptions()"> Benção Patriarcal</label>
+            <label><input type="checkbox" value="Entrevista Bispo Patelli( Assuntos Sigiloso)" onclick="updateSelectedOptions()"> Assuntos Sigiloso</label>
+            <label><input type="checkbox" value="Entrevista 1ro Conselheiros( Renovação Recomendação)" onclick="updateSelectedOptions()"> Renovação Recomendação</label>
+            <label><input type="checkbox" value="Entrevista 2ro Conselheiros(Outros Assuntos)" onclick="updateSelectedOptions()"> Outros Assuntos</label>
+            <label><input type="checkbox" value="Entrevista Pres.Quorum ( Assuntos da Familia)" onclick="updateSelectedOptions()"> Assuntos da Familia</label>
+            <label><input type="checkbox" value="Entrevista Pres.Quorum ( Ministração)" onclick="updateSelectedOptions()"> Ministração</label>
+            <label><input type="checkbox" value="Entrevista Soc.soc ( Bem-Estar da Familia)" onclick="updateSelectedOptions()"> Assuntos Familiares Bem-Estar</label>
+            <label><input type="checkbox" value="Entrevista Soc.soc ( Irmãs Ministrantes)" onclick="updateSelectedOptions()"> Irmãs Ministrantes</label>
             </div>
             </div>
-            <input type="text" id="name" placeholder="Digite Nome e SobreNome" required>
+            <input type="text" id="name" maxlength="25" placeholder="Digite Nome e SobreNome" required>
             <input type="date" id="date" required>
             <input type="time" id="time" required>
             <button onclick="addAppointment()">Fazer Agendamento</button>
         </div>
 
         <!--<h2>Agendamentos</h2>-->
-        <p class="paragrafo-Observacao">Obs: Lembrando que os horarios disponiveis são:
+        <p class="paragrafo-Observacao">Obs: Lembrando que os horarios e dias disponiveis são:
             Terça (19:00hs até 20:30,Bispo e Pres.Quorum), Quarta-feira (1ro Conselheiros),Quinta-Feira (2do Conselheiros e Pres.Soc.soc),Os Domingos das 17:00 até 18:30 en
             Geral. <strong>Obrigado Bispado da Ala Itupeva</strong>
         </p>

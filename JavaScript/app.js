@@ -53,8 +53,23 @@ function loadAppointments() {
         appointmentsList.appendChild(appointmentDiv);
     });
 
+    if(addAppointment==loadAppointments){
+
+        alert("Agendamento com succeso!!");
+
+
+    }
+
 }
 
+//funcion para minizar el numero de caracteres en el nombre
+const inputTexto = document.getElementById('name');
+
+inputTexto.addEventListener('input', () => {
+    if (inputTexto.value.length === 25) {
+    alert('Há atingido ó numero de caracteres!!');
+    }
+});
 
 
 function deleteAppointment(index) {
