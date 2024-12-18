@@ -53,13 +53,6 @@ function loadAppointments() {
         appointmentsList.appendChild(appointmentDiv);
     });
 
-    if(addAppointment==loadAppointments){
-
-        alert("Agendamento com succeso!!");
-
-
-    }
-
 }
 
 //funcion para minizar el numero de caracteres en el nombre
@@ -82,14 +75,14 @@ function deleteAppointment(index) {
 
 //Função para Restrição de Data não Disponivel
 
-const diasDisponivel = [0, 2, 3, 4,]; // Dias disponivel Domingo , Terça , ....5 Quinta
+const diasDisponivel = [2, 3, 4,]; // Dias disponivel Domingo , Terça , ....5 Quinta
 
         document.getElementById("date").addEventListener("input", function() {
             const dataSelecione = new Date(this.value);
             const diaDaSemana = dataSelecione.getUTCDay();
 
             if (!diasDisponivel.includes(diaDaSemana)) {
-                alert("Data não disponivel. Por gentileza, seleciona outro dia. ( Domingo, Terça , Quarta e Quinta");
+                alert("Data não disponivel. Por gentileza, seleciona outro dia. (Terça , Quarta e Quinta");
                 this.value = ""; // Limpiar o imput sim não é data selecionada 
             }
         });
@@ -100,6 +93,7 @@ function toggleDropdown() {
     const dropdownContent = document.querySelector('.dropdown-content');
     dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
 }
+
 
 
 function updateSelectedOptions() {
@@ -148,4 +142,5 @@ function toggleNav() {
     navMenu.classList.toggle('nav-open');
     navMenu.classList.toggle('nav-closed');
 }
+
 
