@@ -59,7 +59,7 @@ function loadAppointments() {
 const inputTexto = document.getElementById('name');
 
 inputTexto.addEventListener('input', () => {
-    if (inputTexto.value.length === 25) {
+    if (inputTexto.value.length === 30) {
     alert('Há atingido ó numero de caracteres!!');
     }
 });
